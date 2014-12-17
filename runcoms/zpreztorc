@@ -15,6 +15,9 @@
 # Color output (auto set to 'no' on dumb terminals).
 zstyle ':prezto:*:*' color 'yes'
 
+# ls color doesn't work on OS X
+zstyle ':prezto:module:utility:ls' color 'no'
+
 # Set the Zsh modules to load (man zshmodules).
 # zstyle ':prezto:load' zmodule 'attr' 'stat'
 
@@ -31,9 +34,17 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'spectrum' \
   'utility' \
+  'ssh' \
   'completion' \
+  'homebrew' \
+  'osx' \
+  'ruby' \
+  'rails' \
+  'git' \
+  'tmux' \
+  'syntax-highlighting' \
+  'history-substring-search' \
   'prompt'
-
 #
 # Editor
 #
@@ -92,7 +103,7 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 #
 
 # Auto switch the Ruby version on directory change.
-# zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
+zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
 
 #
 # Screen
@@ -154,4 +165,4 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 # zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 
 # Integrate with iTerm2.
-# zstyle ':prezto:module:tmux:iterm' integrate 'yes'
+zstyle ':prezto:module:tmux:iterm' integrate 'yes'

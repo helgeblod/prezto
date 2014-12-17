@@ -11,3 +11,39 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/texbin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/bin:$HOME/code/tools/dev
+export PATH=/usr/local/bin:$PATH
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export CDPATH=$CDPATH:$HOME/code:$HOME/code/gems:$HOME/code/java:$HOME/code/java/hanuman:$HOME/code/java/seamstress:$HOME/code/java/componada:$HOME/code/java/
+
+# Use nicer dircolors
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+eval `dircolors -b ~/.dircolors`
+alias ls="ls --color=always"
+alias tmux="tmux -u"
+alias e="/usr/local/Cellar/emacs/24.4/bin/emacsclient --no-wait"
+alias emacs="/usr/local/Cellar/emacs/24.4/bin/emacs -nw"
+alias bi="bundle install"
+alias be="bundle exec"
+alias gst="git status"
+alias gco="git checkout"
+
+# More color with grc (brew install grc)
+source "`brew --prefix`/etc/grc.bashrc"
+
+# Load rbenv automatically by adding
+# the following to ~/.zshrc:
+eval "$(rbenv init -)"
+export JAVA_HOME=$(/usr/libexec/java_home)
+# To avoid irritating java launchers
+export _JAVA_OPTIONS=-Djava.awt.headless=true
+
+export EDITOR="emacsclient"
+
+# Don't exit on ctrl-d
+set -o ignoreeof
+
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
