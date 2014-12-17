@@ -21,7 +21,7 @@ export CDPATH=$CDPATH:$HOME/code:$HOME/code/gems:$HOME/code/java:$HOME/code/java
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 eval `dircolors -b ~/.dircolors`
-alias ls="ls --color=always"
+alias ls="ls --color=always --group-directories-first"
 alias tmux="tmux -u"
 alias e="/usr/local/Cellar/emacs/24.4/bin/emacsclient --no-wait"
 alias emacs="/usr/local/Cellar/emacs/24.4/bin/emacs -nw"
