@@ -23,19 +23,23 @@ MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 eval `dircolors -b ~/.dircolors`
 alias ls="ls --color=always --group-directories-first"
 alias tmux="tmux -u"
-alias e="/usr/local/Cellar/emacs/24.4/bin/emacsclient --no-wait"
-alias emacs="/usr/local/Cellar/emacs/24.4/bin/emacs -nw"
+alias e="/usr/local/Cellar/emacs/24.5/bin/emacsclient --no-wait"
+alias emacs="/usr/local/Cellar/emacs/24.5/bin/emacs -nw"
 alias bi="bundle install"
 alias be="bundle exec"
 alias gst="git status"
 alias gco="git checkout"
 alias si="say -v nora"
+alias sr="release -u snap5 snapshot"
+alias amedia_ssh_tunnel="./bin/sshuttle/src/sshuttle -r ssh.api.no 87.238.55.0/24 -vv"
+alias aid-tmux-reset="tmux kill-session -t aid && pkill java && pkill node && pkill ruby && sudo nginx -s stop && sudo nginx"
+alias irc="ssh -tt ssh.api.no ssh -tt snodd tmux a"
+
 # More color with grc (brew install grc)
 #source "`brew --prefix`/etc/grc.bashrc"
 
 
 # docker stuff
-#export DOCKER_HOST=tcp://192.168.59.103:2375
 export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=/Users/jonas/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
